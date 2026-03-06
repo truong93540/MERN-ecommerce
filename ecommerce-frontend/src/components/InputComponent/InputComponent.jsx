@@ -6,15 +6,17 @@ function InputComponent({
     className,
     onChange,
     value = '',
+    type = 'text',
     ...rests
 }) {
+    console.log('type', type)
     return (
         <input
             size={size}
             placeholder={placeholder}
             bordered={bordered}
             style={style}
-            type="text"
+            type={type}
             id={rests.id}
             onChange={onChange}
             className={className}
